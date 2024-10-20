@@ -1,0 +1,51 @@
+curl -X 'POST' \
+  'http://localhost:5166/api/Pedido/processar-pedidos' \
+  -H 'accept: */*' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "pedidos": [
+      {
+        "pedidoId": 1,
+        "produtos": [
+          {
+            "produtoId": "PS5",
+            "dimensoes": {
+              "altura": 40,
+              "largura": 10,
+              "comprimento": 25
+            }
+          },
+          {
+            "produtoId": "Volante",
+            "dimensoes": {
+              "altura": 40,
+              "largura": 30,
+              "comprimento": 30
+            }
+          }
+        ]
+      },
+      {
+        "pedidoId": 2,
+        "produtos": [
+          {
+            "produtoId": "Joystick",
+            "dimensoes": {
+              "altura": 15,
+              "largura": 20,
+              "comprimento": 10
+            }
+          },
+          {
+            "produtoId": "Fifa 24",
+            "dimensoes": {
+              "altura": 10,
+              "largura": 30,
+              "comprimento": 10
+            }
+          }
+        ]
+      }
+    ]
+  }'
+w
